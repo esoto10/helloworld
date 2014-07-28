@@ -1,0 +1,49 @@
+<div class="clear"></div>
+<div class="portlet">
+		<div class="portlet-header fixed"><img src="images/icons/user.gif" width="16" height="16" alt="Comments" />Datos de los Pasajeros</div>
+       <form id="pasajero-reserva-form"> 
+       <table id="pasajero-reserva-datos">
+       <thead>
+        	<tr>
+            	<td width="120" ><label>G&eacute;nero</label></td>
+            	<td width="120"><label>Nombre</label></td>
+                <td width="120"><label>Apellido Paterno</label></td>
+                <td width="120"><label>Apellido Materno</label></td>
+                <td width="130"><label>Fecha de Nacimiento</label></td>
+                <td width="120"><label>Tipo Documento</label></td>
+                <td width="130"><label>N&uacute;mero Documento</label></td>
+                <td width="120"><label>Pa&iacute;s de Emisi&oacute;n</label></td>
+            </tr>
+       </thead>
+       <tr id="0">
+			<td>
+                <select name="genero" id="genero" class="smallInput">
+                          <option value="Masculino" selected="selected">Masculino</option>
+                          <option value="Femenino">Femenino</option>
+                </select>
+                </td>
+                <td><input name="nombre" type="text" id="nombre" size="14" class="smallInput"/></td>
+                <td><input name="apellidoPaterno" type="text" id="primerapellido" size="14" class="smallInput"/></td>
+                <td><input name="apellidoMaterno" type="text" id="segundoapellido" size="14" class="smallInput"/></td>
+            	<td><input name="fechaNacimiento" type="text" id="fechanacimiento" size="14" class="smallInput"/></td>
+            	<td>
+                <select name="tipoDocumento" id="tipodocumento" class="smallInput">
+                          <option value="Pasaporte">Pasaporte</option>
+                          <option value="DNI" selected="selected">DNI</option>
+                </select>
+            </td>
+                <td><input name="numDocumento" type="text" id="numdocumento" size="14" class="smallInput"/></td>
+                <td><select name="nacionalidad" id="nacionalidad" class="smallInput">
+                  <option value="163">Per&uacute;</option>
+              </select></td>
+       </tr>
+       </table>
+        </form>	
+        <div id="clear"></div>
+        <div align="center" class="message" id="show-message"></div>
+		</div>
+        <div id="opciones">
+        	<a class="button_grey" onClick="agregarFila()"><span>Agregar Pasajero</span></a>
+	        <a class="button" onClick="validarForm('pasajero-reserva')"><span>Siguiente</span></a>
+        </div>
+</div>

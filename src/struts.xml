@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+<constant name="struts.devMode" value="true" />
+<package name="default" extends="json-default">
+
+	<action name="login" method="login" class="com.dis.action.UsuarioAction">
+		<result name="fallologin" type="json" />
+		<result name="success" type="json"/>
+	</action>
+	
+	<action name="*Usuario" method="{1}" class="com.dis.action.UsuarioAction">
+		<result name="falloregistrar" type="json">registro_usuario.html</result>
+		<result name="registrar" >login.html</result>
+		<result name="mostrarCambiarPass">cambiar_pass.jsp</result> <!-- Éxito para mostrar el html donde el usuario cambiará su password -->
+		<result name="falloMostrarCambiarPass">login.html</result><!-- Error al mostrar el html donde el usuario cambiará su password -->
+		<result name="cambioPassword" type="json"/> <!-- Resultado en JSON para la solicitud de cambio de Password	 -->	
+		<result name="updPassword"  type="json"/><!-- Éxito al cambiar el password del usuario -->
+		<result name="obtener" type="json"/>
+		<result name="cerrarSesion">index.jsp</result>
+		<result name="listar" type="json"/>
+		<result name="habilitar" type="json"/>
+		<result name="get" type="json" />
+		<result name="actualizar" type="json" />
+	</action>
+	
+	<action name="*Reserva" method="{1}" class="com.dis.action.ReservaAction">
+		<result name="buscarPorUsuario" type="json"/>
+		<result name="payPal">paypalredirect.jsp</result>
+		<result name="comprar" type="json"/>
+		<result name="canjeMillas" type="json"/>
+		<result name="mostrarPrescencial">compraPrescencial.jsp</result>
+		<result name="pasajero">registrarReserva.jsp</result>
+		<result name="registro" type="json" />
+		<result name="buscarxcodigo" >checkInStp2.html</result>
+		<result name="fallobuscarreserva" type="json" />
+		<result name="buscarPagadas" type="json" />
+	</action>
+	
+	<action name="*Vuelo" method="{1}" class="com.dis.action.VueloAction">
+		<result name="buscar" type="json"/>
+		<result name="confirmarBuscar">pasajeroReserva.html</result>
+		
+	</action>
+	
+	<action name="*Checkin" method="{1}" class="com.dis.action.CheckinAction">
+		<result name="cargarInfoStp2" type="json"/>
+		<result name="seleccionarPasajeros">checkInStp3.html</result>
+		<result name="falloSeleccion" type="json"/>
+		<result name="cargarInfoPasajerosStp3" type="json"/>
+		<result name="actualizarInfoPasajeros" type="json"/>
+		<result name="verificarInfoPasajeros">checkInStp4.html</result>
+		<result name="cargarInfoPasajerosStp4" type="json"/>
+		<result name="buscarAsientosOcupados" type="json"/>
+		<result name="seleccionarAsiento" type="json"/>
+		<result name="verificar">checkInStp5.html</result>
+		<result name="cargarInfoPasajerosStp5" type="json"/>
+		<!--result name="cargarInfoTarjetaEmbarque" type="json"/>-->
+		<result name="cargarInfoTarjetaEmbarque" type="stream">
+		  <param name="contentType">application/pdf</param>
+		  <param name="inputName">inputStream</param>
+		  <param name="contentDisposition">contentDisposition</param>
+		  <param name="bufferSize">1024</param>
+		</result>
+		<result name="resetSession" type="json"/>
+	</action>
+	
+</package>
+
+</struts>

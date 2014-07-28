@@ -1,0 +1,86 @@
+<div class="grid_9">
+    <h1 class="checkin">Check In</h1>
+    </div>
+    <!--RIGHT TEXT/CALENDAR-->
+    <div class="grid_6" id="eventbox"><a href="#" class="inline_calendar">Ud tiene X reservas pendientes! Sus millas acumuladas son XXX</a>
+   	  <div class="hidden_calendar"></div>
+    </div>
+    
+    <!--  TITLE END  -->    
+    <!-- #PORTLETS START -->
+    <div id="portlets">
+    <!-- FIRST SORTABLE COLUMN START -->
+
+      <!--THIS IS A PORTLET-->
+      <div class="clear"></div>
+		<div class="portlet">
+		<div class="portlet-header fixed"><img src="images/icons/user.gif" width="16" height="16" alt="Comments" />Selección de Pasajeros</div>
+
+		<div class="portlet-content nopadding">
+            <div class="instrucciones">
+            	<span>Revise su vuelo y seleccione los pasajeros que desea chequear</span>
+            </div>    
+        <div class="message" id="show-message"></div> 
+        <div class="portlet">
+        <div class="portlet-header fixed"><img src="images/icons/airplane.png" width="16" height="16" />Itinerario</div>
+		<div class="portlet-content nopadding">
+       <div id="contenedor_tabla_procesos">
+                        <div id="cont-itinerario-list">
+                                        <table class="tabla_form_proceso" width="100%" border="0" cellspacing="0" cellpadding="0" id="box-table-a">    
+                                            <thead>
+                                                <tr>
+                                                    <th class="encabezado_tabla_form_proceso">Fecha</th>
+                                                    <th class="encabezado_tabla_form_proceso">Origen</th>
+                                                    <th class="encabezado_tabla_form_proceso">Hora de Salida</th>
+                                                    <th class="encabezado_tabla_form_proceso">Destino</th>
+                                                    <th class="encabezado_tabla_form_proceso">Hora de Llegada</th>
+                                                    <th class="encabezado_tabla_form_proceso">Vuelo</th>
+                                                    <th class="encabezado_tabla_form_proceso">Estado</th>
+                                                </tr>
+                                            </thead>
+                                          <tbody id="vuelo-list-tbody" align="center" class="center">
+                                          </tbody>
+                                      </table>
+                        </div>
+                </div>
+		</div>
+      </div>
+      
+      <div class="portlet">
+        <div class="portlet-header fixed"><img src="images/icons/user.gif" width="16" height="16" alt="Comments" />Pasajeros</div>
+		<div class="portlet-content nopadding">
+          <div id="contenedor_tabla_procesos">
+    				<div id="cont-pasajeros-form">
+            			<form id="seleccion-pasajeros-form" name="seleccion-pasajeros-form">
+                                        <table class="tabla_form_proceso" width="100%" border="0" cellspacing="0" cellpadding="0" id="box-table-a">    
+                                            <thead>
+                                                <tr>
+                                                    <th class="encabezado_tabla_form_proceso">Selección</th>                                                    
+                                                    <th class="encabezado_tabla_form_proceso">Nombres</th>
+                                                    <th class="encabezado_tabla_form_proceso">Apellidos</th>
+                                                    <th class="encabezado_tabla_form_proceso">Género</th>
+                                                    <th class="encabezado_tabla_form_proceso">Tipo de Persona</th>
+                                                    <th class="encabezado_tabla_form_proceso">Estado</th>
+                                                </tr>
+                                            </thead>
+                                          <tbody id="pasajeros-list-tbody" class="center" align="center">
+                                          </tbody>
+                                      </table> 
+                     	</form>       
+                     </div>
+                </div>
+		</div>
+      </div>
+        <div class="clear"></div>                  
+        <div id="opciones" align="right">
+              <a class="button_grey" id="btn_atras" onclick="mostrar('checkin')"><span>Atrás</span></a>
+              <a class="button_grey" id="btn_home" onclick="resetSession()"><span>Regresar a Inicio</span></a>
+              <a class="button" id="btn_continuar" onclick="validarForm('checkin-stp2')"><span>Continuar</span></a>
+              
+        </div>
+	</div>
+	</div>   
+	</div>
+
+
+    

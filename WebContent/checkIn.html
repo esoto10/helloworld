@@ -1,0 +1,63 @@
+	<div class="grid_9">
+    <h1 class="checkin">Check In</h1>
+    </div>
+    <!--RIGHT TEXT/CALENDAR-->
+    <div class="grid_6" id="eventbox"><a href="#" class="inline_calendar">Ud tiene X reservas pendientes! Sus millas acumuladas son XXX</a>
+   	  <div class="hidden_calendar"></div>
+    </div>
+    
+    <!--  TITLE END  -->    
+    <!-- #PORTLETS START -->
+    <div id="portlets">
+    <!-- FIRST SORTABLE COLUMN START -->
+
+      	<!--THIS IS A PORTLET-->
+      	<div class="clear"></div>
+		<div class="portlet">
+		<div class="portlet-header fixed"><img src="images/icons/airplane.png" width="16" height="16" >Selección de Reserva</div>
+		<div class="portlet-content nopadding">
+            <div class="instrucciones">
+            	<span>Este servicio le permite elegir asiento e imprimir su tarjeta de embarque antes de ir al aeropuerto.<br />
+            	El Check-in puede realizarse <b>entre 48 y 2 horas</b> antes de la salida del vuelo.</span>
+            </div>
+            <div class="message" id="show-message"></div> 
+            <div class="portlet">
+            	<div class="portlet-header fixed"><img src="images/icons/airplane.png" width="16" height="16" />Reservas Pagadas</div>
+            	<div class="portlet-content nopadding">
+                    <div id="reserva-list-ctr">
+                            <form id="sel-reserva-form" name="sel-reserva-form">  
+                      <table width="100%" border="0" cellspacing="0" cellpadding="0" id="box-table-a"> 
+                                    
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Fecha de Reserva</th>
+                                                <th scope="col">Fecha de Pago</th>
+                                                <th scope="col">Vuelo</th>
+                                                <th scope="col">Fecha de Vuelo</th>
+                                                <th scope="col">Salida</th>
+                                                <th scope="col">Legada</th>
+                                                <th scope="col">Cabina</th>				                    
+                                                <th scope="col">Selección</th>
+                                            </tr>
+                                        </thead>              	
+                                        <tbody  align="center"  id="reserva-list-tbody"></tbody>
+                                    </table>
+                            </form>
+                    </div> 
+            	</div>
+            </div>  
+       		<div class="clear"></div>                  
+            <div id="opciones" align="right">
+                                    <a class="button" onclick="validarForm('sel-reserva')"><span>Continuar</span></a>
+            </div>
+		</div>   
+
+	  </div>    
+    	<!--THIS IS A PORTLET-->
+          
+    <!--  END #PORTLETS -->  
+    </div>
+
+    
+
+		

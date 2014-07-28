@@ -1,0 +1,399 @@
+<div class="grid_9">
+    <h1 class="checkin">Check In</h1>
+    </div>
+    <!--RIGHT TEXT/CALENDAR-->
+    <div class="grid_6" id="eventbox"><a href="#" class="inline_calendar">Ud tiene X reservas pendientes! Sus millas acumuladas son XXX</a>
+   	  <div class="hidden_calendar"></div>
+    </div>
+    
+    <!--  TITLE END  -->    
+    <!-- #PORTLETS START -->
+    <div id="portlets">
+    <!-- FIRST SORTABLE COLUMN START -->
+
+      <!--THIS IS A PORTLET-->
+      	<div class="clear"></div>
+		<div class="portlet">
+		<div class="portlet-header fixed"><img src="images/icons/user.gif" width="16" height="16" alt="Comments" />Información de Pasajeros</div>
+
+		<div class="portlet-content nopadding">
+            <div class="instrucciones">
+            	<span>Verifique la información de los pasajeros de los que desea realizar el check-in</span>
+            </div>               
+        <div class="message" id="show-message"></div> 
+        <div id="cont-pasajeros-chkinstp3">
+        	<div id="pasajero-n1" style="display: none;">
+        	<div class="portlet">
+			<div class="portlet-content nopadding"> 				
+			    <div class="margenTitulo"><b><span id="titulo"></span></b></div>
+			    <form id="pasajero-n1-form" name="pasajero-n1-form">
+			        <table width="100%">
+			           	<tbody>
+			               	<tr>
+			                   	<td width="137">
+			                      <label for="nombre">Nombre:</label></td>
+			                   	<td width="193">
+			                   		<input type="hidden" name="persona.idPersona" id="idPersona" class="smallInput">
+			                   		<input type="text" name="persona.nombre" id="nombre" class="smallInput"></td>
+			                    <td width="148"><label for="apellidoPaterno">Apellido Paterno:</label></td>
+			                    <td width="174"><input type="text" name="persona.apellidoPaterno" id="apellidoPaterno" class="smallInput"></td>
+			                    <td width="107"><label for="apellidoMaterno">Apellido Materno:</label></td>
+			                    <td width="156"><input type="text" name="persona.apellidoMaterno" id="apellidoMaterno" class="smallInput"></td>
+			                </tr>
+			               	<tr>
+			                   	<td><label for="tipoDocumento">Tipo de Documento:</label></td>
+			                   	<td><select name="persona.tipoDocumento" id="tipoDocumento" class="smallInput">
+			                   	  <option value="">Seleccionar</option>
+			                   	  <option value="1">DNI</option>
+			                   	  <option value="2">Pasaporte</option>
+			                   	  <option value="3">Carné de Extranjeria</option>
+			               	    </select></td>
+			                    <td><label for="numDocumento">Número de Documento:</label></td>
+			                    <td><input type="text" name="persona.numDocumento" id="numDocumento" class="smallInput"></td>
+			                    <td><label id="lblNacionalidad" for="nacionalidad">Nacionalidad:</label></td>
+			                    <td><select name="persona.nacionalidad" id="nacionalidad" class="smallInput">
+			                    </select></td>
+			                </tr>
+			               	<tr>
+			                   	<td><label for="genero">Género:</label></td>
+			                   	<td><select name="persona.genero" id="genero" class="smallInput">
+			                   	  <option value="">Seleccionar</option>
+			                   	  <option value="1">Masculino</option>
+			                   	  <option value="2">Femenino</option>
+			               	    </select></td>
+			                    <td><label for="tipoPersona">Tipo de Persona:</label></td>
+			                    <td><select name="persona.tipoPersona" id="tipoPersona" class="smallInput">
+			                      <option value="">Seleccionar</option>
+			                      <option value="1">Adulto</option>
+			                      <option value="2">Niño</option>
+			                      <option value="3">Infante</option>
+			                    </select></td>
+			                    <td colspan="2"></td>
+			                </tr>                                             
+			   	        </tbody>
+			   	    </table>      
+			      </form>
+			</div><!--END CONTENT-->
+			<div class="floatRight"><a class="button" onClick="validarFormUptChk('pasajero-n1')"><span>Actualizar</span></a></div>   
+			<div class="clear"></div>
+			</div><!--END PORTLET-->
+			</div><!--PASAJERO-->
+			
+		    <div id="pasajero-n2" style="display: none;">        	
+        	<div class="portlet">
+			<div class="portlet-content nopadding">
+		   		<div class="margenTitulo"><b><span id="titulo"></span></b></div>
+		    <form id="pasajero-n2-form" name="pasajero-n2-form">
+		        <table width="100%">
+		           	<tbody>
+		               	<tr>
+		                   	<td width="137">
+		                      <label for="nombre">Nombre:</label></td>
+		                   	<td width="193">
+		                   		<input type="hidden" name="persona.idPersona" id="idPersona" class="smallInput">
+		                   		<input type="text" name="persona.nombre" id="nombre" class="smallInput"></td>
+		                    <td width="148"><label for="apellidoPaterno">Apellido Paterno:</label></td>
+		                    <td width="174"><input type="text" name="persona.apellidoPaterno" id="apellidoPaterno" class="smallInput"></td>
+		                    <td width="107"><label for="apellidoMaterno">Apellido Materno:</label></td>
+		                    <td width="156"><input type="text" name="persona.apellidoMaterno" id="apellidoMaterno" class="smallInput"></td>
+		                </tr>
+		               	<tr>
+		                   	<td><label for="tipoDocumento">Tipo de Documento:</label></td>
+		                   	<td><select name="persona.tipoDocumento" id="tipoDocumento" class="smallInput">
+		                   	  <option value="">Seleccionar</option>
+		                   	  <option value="1">DNI</option>
+		                   	  <option value="2">Pasaporte</option>
+		                   	  <option value="3">Carné de Extranjeria</option>
+		               	    </select></td>
+		                    <td><label for="numDocumento">Número de Documento:</label></td>
+		                    <td><input type="text" name="persona.numDocumento" id="numDocumento" class="smallInput"></td>
+		                    <td><label id="lblNacionalidad" for="nacionalidad">Nacionalidad:</label></td>
+		                    <td><select name="persona.nacionalidad" id="nacionalidad" class="smallInput">
+		                    </select></td>
+		                </tr>
+		               	<tr>
+		                   	<td><label for="genero">Género:</label></td>
+		                   	<td><select name="persona.genero" id="genero" class="smallInput">
+		                   	  <option value="">Seleccionar</option>
+		                   	  <option value="1">Masculino</option>
+		                   	  <option value="2">Femenino</option>
+		               	    </select></td>
+		                    <td><label for="tipoPersona">Tipo de Persona:</label></td>
+		                    <td><select name="persona.tipoPersona" id="tipoPersona" class="smallInput">
+		                      <option value="">Seleccionar</option>
+		                      <option value="1">Adulto</option>
+		                      <option value="2">Niño</option>
+		                      <option value="3">Infante</option>
+		                    </select></td>
+		                    <td colspan="2"></td>
+		                </tr>                                             
+		   	        </tbody>
+		   	    </table>  
+		      </form>				
+			</div><!--END CONTENT-->
+			<div class="floatRight"><a class="button" onClick="validarFormUptChk('pasajero-n2')"><span>Actualizar</span></a></div>   
+			<div class="clear"></div>
+			</div><!--END PORTLET-->
+			</div><!--PASAJERO-->
+			
+			<div id="pasajero-n3" style="display: none;">			
+			<div class="portlet">
+			<div class="portlet-content nopadding">
+				<div class="margenTitulo"><b><span id="titulo"></span></b></div>
+			    <form id="pasajero-n3-form" name="pasajero-n3-form">
+			        <table width="100%">
+			           	<tbody>
+			               	<tr>
+			                   	<td width="137">
+			                      <label for="nombre">Nombre:</label></td>
+			                   	<td width="193">
+			                   		<input type="hidden" name="persona.idPersona" id="idPersona" class="smallInput">
+			                   		<input type="text" name="persona.nombre" id="nombre" class="smallInput"></td>
+			                    <td width="148"><label for="apellidoPaterno">Apellido Paterno:</label></td>
+			                    <td width="174"><input type="text" name="persona.apellidoPaterno" id="apellidoPaterno" class="smallInput"></td>
+			                    <td width="107"><label for="apellidoMaterno">Apellido Materno:</label></td>
+			                    <td width="156"><input type="text" name="persona.apellidoMaterno" id="apellidoMaterno" class="smallInput"></td>
+			                </tr>
+			               	<tr>
+			                   	<td><label for="tipoDocumento">Tipo de Documento:</label></td>
+			                   	<td><select name="persona.tipoDocumento" id="tipoDocumento" class="smallInput">
+			                   	  <option value="">Seleccionar</option>
+			                   	  <option value="1">DNI</option>
+			                   	  <option value="2">Pasaporte</option>
+			                   	  <option value="3">Carné de Extranjeria</option>
+			               	    </select></td>
+			                    <td><label for="numDocumento">Número de Documento:</label></td>
+			                    <td><input type="text" name="persona.numDocumento" id="numDocumento" class="smallInput"></td>
+			                    <td><label id="lblNacionalidad" for="nacionalidad">Nacionalidad:</label></td>
+			                    <td><select name="persona.nacionalidad" id="nacionalidad" class="smallInput">
+			                    </select></td>
+			                </tr>
+			               	<tr>
+			                   	<td><label for="genero">Género:</label></td>
+			                   	<td><select name="persona.genero" id="genero" class="smallInput">
+			                   	  <option value="">Seleccionar</option>
+			                   	  <option value="1">Masculino</option>
+			                   	  <option value="2">Femenino</option>
+			               	    </select></td>
+			                    <td><label for="tipoPersona">Tipo de Persona:</label></td>
+			                    <td><select name="persona.tipoPersona" id="tipoPersona" class="smallInput">
+			                      <option value="">Seleccionar</option>
+			                      <option value="1">Adulto</option>
+			                      <option value="2">Niño</option>
+			                      <option value="3">Infante</option>
+			                    </select></td>
+			                    <td colspan="2"></td>
+			                </tr>                                             
+			   	        </tbody>
+			   	    </table> 
+			      </form>			
+			</div><!--END CONTENT-->
+			<div class="floatRight"><a class="button" onClick="validarFormUptChk('pasajero-n3')"><span>Actualizar</span></a></div>   
+			<div class="clear"></div>
+			</div><!--END PORTLET-->
+      		</div><!--PASAJERO-->
+      		
+      		<div id="pasajero-n4" style="display: none;">
+        	<div class="portlet">
+			<div class="portlet-content nopadding">
+				<div class="margenTitulo"><b><span id="titulo"></span></b></div>
+			    <form id="pasajero-n4-form" name="pasajero-n4-form">
+			        <table width="100%">
+			           	<tbody>
+			               	<tr>
+			                   	<td width="137">
+			                      <label for="nombre">Nombre:</label></td>
+			                   	<td width="193">
+			                   		<input type="hidden" name="persona.idPersona" id="idPersona" class="smallInput">
+			                   		<input type="text" name="persona.nombre" id="nombre" class="smallInput"></td>
+			                    <td width="148"><label for="apellidoPaterno">Apellido Paterno:</label></td>
+			                    <td width="174"><input type="text" name="persona.apellidoPaterno" id="apellidoPaterno" class="smallInput"></td>
+			                    <td width="107"><label for="apellidoMaterno">Apellido Materno:</label></td>
+			                    <td width="156"><input type="text" name="persona.apellidoMaterno" id="apellidoMaterno" class="smallInput"></td>
+			                </tr>
+			               	<tr>
+			                   	<td><label for="tipoDocumento">Tipo de Documento:</label></td>
+			                   	<td><select name="persona.tipoDocumento" id="tipoDocumento" class="smallInput">
+			                   	  <option value="">Seleccionar</option>
+			                   	  <option value="1">DNI</option>
+			                   	  <option value="2">Pasaporte</option>
+			                   	  <option value="3">Carné de Extranjeria</option>
+			               	    </select></td>
+			                    <td><label for="numDocumento">Número de Documento:</label></td>
+			                    <td><input type="text" name="persona.numDocumento" id="numDocumento" class="smallInput"></td>
+			                    <td><label id="lblNacionalidad" for="nacionalidad">Nacionalidad:</label></td>
+			                    <td><select name="persona.nacionalidad" id="nacionalidad" class="smallInput">
+			                    </select></td>
+			                </tr>
+			               	<tr>
+			                   	<td><label for="genero">Género:</label></td>
+			                   	<td><select name="persona.genero" id="genero" class="smallInput">
+			                   	  <option value="">Seleccionar</option>
+			                   	  <option value="1">Masculino</option>
+			                   	  <option value="2">Femenino</option>
+			               	    </select></td>
+			                    <td><label for="tipoPersona">Tipo de Persona:</label></td>
+			                    <td><select name="persona.tipoPersona" id="tipoPersona" class="smallInput">
+			                      <option value="">Seleccionar</option>
+			                      <option value="1">Adulto</option>
+			                      <option value="2">Niño</option>
+			                      <option value="3">Infante</option>
+			                    </select></td>
+			                    <td colspan="2"></td>
+			                </tr>                                             
+			   	        </tbody>
+			   	    </table>  
+			      </form>				
+			</div><!--END CONTENT-->
+			<div class="floatRight"><a class="button" onClick="validarFormUptChk('pasajero-n4')"><span>Actualizar</span></a></div>   
+			<div class="clear"></div>
+			</div><!--END PORTLET-->
+			</div><!--PASAJERO-->
+			
+			<div id="pasajero-n5" style="display: none;">
+        	<div class="portlet">
+			<div class="portlet-content nopadding">
+				<div class="margenTitulo"><b><span id="titulo"></span></b></div>	
+			    <form id="pasajero-n5-form" name="pasajero-n5-form">
+			        <table width="100%">
+			           	<tbody>
+			               	<tr>
+			                   	<td width="137">
+			                      <label for="nombre">Nombre:</label></td>
+			                   	<td width="193">
+			                   		<input type="hidden" name="persona.idPersona" id="idPersona" class="smallInput">
+			                   		<input type="text" name="persona.nombre" id="nombre"></td>
+			                    <td width="148"><label for="apellidoPaterno">Apellido Paterno:</label></td>
+			                    <td width="174"><input type="text" name="persona.apellidoPaterno" id="apellidoPaterno" class="smallInput"></td>
+			                    <td width="107"><label for="apellidoMaterno">Apellido Materno:</label></td>
+			                    <td width="156"><input type="text" name="persona.apellidoMaterno" id="apellidoMaterno" class="smallInput"></td>
+			                </tr>
+			               	<tr>
+			                   	<td><label for="tipoDocumento">Tipo de Documento:</label></td>
+			                   	<td><select name="persona.tipoDocumento" id="tipoDocumento" class="smallInput">
+			                   	  <option value="">Seleccionar</option>
+			                   	  <option value="1">DNI</option>
+			                   	  <option value="2">Pasaporte</option>
+			                   	  <option value="3">Carné de Extranjeria</option>
+			               	    </select></td>
+			                    <td><label for="numDocumento">Número de Documento:</label></td>
+			                    <td><input type="text" name="persona.numDocumento" id="numDocumento" class="smallInput"></td>
+			                    <td><label id="lblNacionalidad" for="nacionalidad">Nacionalidad:</label></td>
+			                    <td><select name="persona.nacionalidad" id="nacionalidad" class="smallInput">
+			                    </select></td>
+			                </tr>
+			               	<tr>
+			                   	<td><label for="genero">Género:</label></td>
+			                   	<td><select name="persona.genero" id="genero" class="smallInput">
+			                   	  <option value="">Seleccionar</option>
+			                   	  <option value="1">Masculino</option>
+			                   	  <option value="2">Femenino</option>
+			               	    </select></td>
+			                    <td><label for="tipoPersona">Tipo de Persona:</label></td>
+			                    <td><select name="persona.tipoPersona" id="tipoPersona" class="smallInput">
+			                      <option value="">Seleccionar</option>
+			                      <option value="1">Adulto</option>
+			                      <option value="2">Niño</option>
+			                      <option value="3">Infante</option>
+			                    </select></td>
+			                    <td colspan="2"></td>
+			                </tr>                                             
+			   	        </tbody>
+			   	    </table>
+			      </form> 				
+			</div><!--END CONTENT-->
+			<div class="floatRight"><a class="button" onClick="validarFormUptChk('pasajero-n5')"><span>Actualizar</span></a></div>   
+			<div class="clear"></div>
+			</div><!--END PORTLET-->
+			</div><!--PASAJERO-->
+			
+			<div id="pasajero-n6" style="display: none;">
+			<div class="portlet">
+			<div class="portlet-content nopadding">
+
+				<div class="margenTitulo"><b><span id="titulo"></span></b></div>
+			    <form id="pasajero-n6-form" name="pasajero-n6-form">
+			        <table width="100%">
+			           	<tbody>
+			               	<tr>
+			                   	<td width="137">
+			                      <label for="nombre">Nombre:</label></td>
+			                   	<td width="193">
+			                   		<input type="hidden" name="persona.idPersona" id="idPersona" class="smallInput">
+			                   		<input type="text" name="persona.nombre" id="nombre" class="smallInput"></td>
+			                    <td width="148"><label for="apellidoPaterno">Apellido Paterno:</label></td>
+			                    <td width="174"><input type="text" name="persona.apellidoPaterno" id="apellidoPaterno" class="smallInput"></td>
+			                    <td width="107"><label for="apellidoMaterno">Apellido Materno:</label></td>
+			                    <td width="156"><input type="text" name="persona.apellidoMaterno" id="apellidoMaterno" class="smallInput"></td>
+			                </tr>
+			               	<tr>
+			                   	<td><label for="tipoDocumento">Tipo de Documento:</label></td>
+			                   	<td><select name="persona.tipoDocumento" id="tipoDocumento" class="smallInput">
+			                   	  <option value="">Seleccionar</option>
+			                   	  <option value="1">DNI</option>
+			                   	  <option value="2">Pasaporte</option>
+			                   	  <option value="3">Carné de Extranjeria</option>
+			               	    </select></td>
+			                    <td><label for="numDocumento">Número de Documento:</label></td>
+			                    <td><input type="text" name="persona.numDocumento" id="numDocumento" class="smallInput"></td>
+			                    <td><label id="lblNacionalidad" for="nacionalidad">Nacionalidad:</label></td>
+			                    <td><select name="persona.nacionalidad" id="nacionalidad" class="smallInput">
+			                    </select></td>
+			                </tr>
+			               	<tr>
+			                   	<td><label for="genero">Género:</label></td>
+			                   	<td><select name="persona.genero" id="genero" class="smallInput">
+			                   	  <option value="">Seleccionar</option>
+			                   	  <option value="1">Masculino</option>
+			                   	  <option value="2">Femenino</option>
+			               	    </select></td>
+			                    <td><label for="tipoPersona">Tipo de Persona:</label></td>
+			                    <td><select name="persona.tipoPersona" id="tipoPersona" class="smallInput">
+			                      <option value="">Seleccionar</option>
+			                      <option value="1">Adulto</option>
+			                      <option value="2">Niño</option>
+			                      <option value="3">Infante</option>
+			                    </select></td>
+			                    <td colspan="2"></td>
+			                </tr>                                             
+			   	        </tbody>
+			   	    </table>   
+			      </form>			
+			</div><!--END CONTENT-->
+			<div class="floatRight"><a class="button" onClick="validarFormUptChk('pasajero-n6')"><span>Actualizar</span></a></div>   
+			<div class="clear"></div>
+			</div><!--END PORTLET-->
+			</div><!--PASAJERO-->				
+	</div>
+<hr/>
+	<div><h3>Declaración necesaria para viajar</h3></div>
+	<table width="100%">
+	  <tr>
+      	<td colspan="2">
+        	<input type="checkbox" id="declaracion" name="declaracion" value="yes">He leido y aceptado los términos.
+        </td>
+      </tr>
+      <tr style="padding-left: 25px">	
+      	<td width="5%">&nbsp;</td>
+        <td >
+           <ul>
+                <li><span>Declaro que la información registrada es correcta y fidedigna.</span></li>
+                <li><span>Declaro conocer el equipaje libre de pago que puedo llevar.</span></li>
+                <li><span>Declaro que conozco los elementos prohibidos en el equipaje y no los transportaré.</span></li>
+                <li><span>Declaro viajar con la documentación requerida y vigente para este viaje.</span></li>
+   			</ul>
+        </td>
+      </tr> 
+    </table>
+
+    <div class="clear"></div>                  
+    <div id="opciones">
+          <a class="button_grey" id="btn_atras" onClick="mostrar('checkin2')"><span>Atrás</span></a>
+          <a class="button" id="btn_continuar" onClick="validarForm('checkin-stp3')"><span>Continuar</span></a>  
+    </div>
+    </div>    
+	</div>   
+	</div>
+
+
+    

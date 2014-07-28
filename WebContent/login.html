@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>::Login | ATWS::</title>
+<link href="css/estilos.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/login.css" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" href="css/jquery.ui.all.css"/>
+<script src="js/jquery-1.6.js"></script>
+
+<script src="js/jquery.bgiframe-2.1.2.js"></script>
+<script src="js/jquery.ui.core.js"></script>
+<script src="js/jquery.ui.widget.js"></script>
+<script src="js/jquery.ui.button.js"></script>
+<script src="js/jquery.ui.position.js"></script>
+<script src="js/jquery.ui.dialog.js"></script>
+<script src="js/jquery.effects.core.js"></script>
+<script src="js/jquery.ui.datepicker.js"></script>
+
+<script src="js/util.js"></script>
+<script src="js/ajax.util.js"></script>
+<script src="js/vistas.js"></script>
+<link rel="shortcut icon" href="favicon.ico" />
+<style>
+		label, input { display:block; }
+		input.text { margin-bottom:12px; width:95%; padding: .4em;}
+		fieldset { padding:0; border:0; margin-top:25px; }
+		div.ui-datepicker{font-size:9px;}
+</style>
+<script>
+$(function() {
+	initDateTimePicker("#fechaNacimiento");
+	initLogin();
+});
+
+
+function onEnter(e) {
+    if (e.keyCode == 13) {
+        validarForm('login');
+    }
+}
+</script>  
+</head>
+
+<body>
+<div class="container_16">
+  <div class="grid_6 prefix_5 suffix_5">
+   	  <h1>Iniciar Sesión</h1>
+    	<div id="login">
+                 
+    	  <form id="login-form" name="login-form"  >
+    	    <p>
+    	      <label><strong>E-mail</strong>
+<input type="text" name="usuario.email" class="inputText" id="email" onkeypress="onEnter(event)"/>
+    	      </label>
+  	      </p>
+    	    <p>
+    	      <label><strong>Contraseña</strong>
+  <input type="password" name="usuario.password" class="inputText" id="password" onkeypress="onEnter(event)"/>
+  	        </label>
+    	    </p>
+            <div class="login" align="center" id="show-message"></div>
+    		<a class="black_button" href="javascript:void(0)" onclick="validarForm('login')"><span>Ingresar</span></a>
+             <a id="newUser" href="#" onclick="nuevoUsuario()">Nuevo Usuario</a>            
+    	  </form>
+		  <br clear="all" />
+          
+    	</div>
+        <div id="forgot">
+        <a href="javascript:void(0)" onClick="recuperarPassword()" class="forgotlink"><span>¿Olvidó su Contraseña?</span></a>
+        </div>
+  </div>
+</div>
+<div id="nuevo-usuario-form" title="Nuevo Usuario" style="font-size:62.5%;">
+	 <div class="nuevo-usuario" align="center" id=""></div>
+
+	<form id="usuario-form">
+	<fieldset>
+		<label for="name">Nombre</label>
+		<input type="text" name="usuario.nombre" id="nombre" class="text ui-widget-content ui-corner-all" />
+		<label for="apellidoPaterno">Apellido Paterno</label>
+		<input type="text" name="usuario.apellidoPaterno" id="apellidoPaterno" value="" class="text ui-widget-content ui-corner-all" />
+		<label for="apellidoMaterno">Apellido Materno</label>
+		<input type="text" name="usuario.apellidoMaterno" id="apellidoMaterno" value="" class="text ui-widget-content ui-corner-all" />
+		<label for="fechaNacimiento">Fecha de Nacimiento</label>
+		<input type="text" name="usuario.fechaNacimiento" id="fechaNacimiento" class="text ui-widget-content ui-corner-all" />
+		<label for="tipoDocumento">Tipo de Documento</label>
+		<select name="usuario.tipoDocumento" id="tipoDocumento" class="text ui-widget-content ui-corner-all">
+        			<option value="1" selected="selected">DNI</option>
+                    <option value="2">Pasaporte</option>
+                    <option value="3">Carné de Extranjeria</option>
+        </select>
+        <label for="numeroDocumento">Número de Documento</label>
+		<input type="text" name="usuario.numeroDocumento" id="numeroDocumento" value="" class="text ui-widget-content ui-corner-all" />
+		<label for="sexo">Sexo</label>
+		<select name="usuario.sexo" id="sexo" class="text ui-widget-content ui-corner-all">
+                    <option value="1">Masculino</option>
+                    <option value="2">Femenino</option>
+      </select>
+		<label for="email">Email</label>
+		<input type="text" name="usuario.email" id="emailNuevoUsuario" value="" class="text ui-widget-content ui-corner-all" />
+		<label for="password">Password</label>
+		<input type="password" name="usuario.password" id="passwordNuevoUsuario" value="" class="text ui-widget-content ui-corner-all" />
+		<label for="password">Confirmar Password</label>
+		<input type="password" id="confirmarPassword" class="text ui-widget-content ui-corner-all" />
+	</fieldset>
+	</form>
+</div>
+<div id="recuperar-password-form" title="Recuperar Password" style="font-size:62.5%;">
+<div class="recuperar-password" align="center" id=""></div>
+<form id="request-password-form">
+	<fieldset>
+		<label for="email">E-mail</label>
+		<input type="text" id="emailRecuperarPassword" name="usuario.email" value="" class="text ui-widget-content ui-corner-all" />
+	</fieldset>
+</form>
+</div>
+<br clear="all" />
+</body>
+</html>

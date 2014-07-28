@@ -1,0 +1,91 @@
+<div class="grid_9">
+    <h1 class="checkin">Check In</h1>
+    </div>
+    <!--RIGHT TEXT/CALENDAR-->
+    <div class="grid_6" id="eventbox"><a href="#" class="inline_calendar">Ud tiene X reservas pendientes! Sus millas acumuladas son XXX</a>
+   	  <div class="hidden_calendar"></div>
+    </div>
+    
+    <!--  TITLE END  -->    
+    <!-- #PORTLETS START -->
+    <div id="portlets">
+    <!-- FIRST SORTABLE COLUMN START -->
+
+      <!--THIS IS A PORTLET-->
+      <div class="clear"></div>
+		<div class="portlet">
+		<div class="portlet-header fixed"><img src="images/icons/airplane.png" alt="" width="16" height="16" />Selección de Asientos</div>
+
+		<div class="portlet-content nopadding">
+            <div class="instrucciones">
+            	<span>Seleccione los asientos deseados por cada pasajero</span>
+            </div>
+        <div class="message" id="show-message"></div> 
+        <div class="portlet">
+        <div class="portlet-header fixed"><img src="images/icons/user.gif" width="16" height="16" />Pasajeros</div>
+		<div class="portlet-content nopadding">
+			<div id="cont-pasajeros-chkinstp4">
+    		<div id="cont-pasajeros-form">
+            <form id="seleccion-asientos-form" name="seleccion-asientos-form">
+              <table width="100%" id="box-table-a">
+                <thead>
+                    <tr>
+                        <th scope="col">N°</th>
+                        <th scope="col">Nombres</th>
+                        <th scope="col">Apellidos</th>
+                        <th scope="col">Asiento</th>
+                        <th scope="col">Acci&oacute;n</th>
+                    </tr>
+                </thead>
+                <tbody id="pasajeros-list-tbody" align="center"></tbody>
+              </table>
+          </form>
+          <div class="clear"></div>
+          <div id="cont-asientos-chkinstp4" class="hidden" style="padding-top:20px;">
+			<hr/>	
+				<div id="mostrar-asientos-form" style="padding-left:40%;">
+
+			          <table>
+			          	<tr>
+			          		<td align="center"><h3>Asientos Disponibles</h3></td>
+			          	</tr>
+			          	<tr>
+			          		<td align="center">
+						       <table>
+								    <thead>
+								        <tr>
+								            <th></th>
+								            <th></th>
+								            <th>A</th>
+								            <th>B</th>
+								            <th>C</th>
+								            <th></th>
+								            <th>D</th>
+								            <th>E</th>
+								            <th>F</th>
+								            <th></th>
+								        </tr>
+								        <tr>
+								            <th colspan="10"></th>
+								        </tr>
+								    </thead>
+								    <tbody id="asientos-list-tbody"></tbody>
+							   	</table>
+			          		</td>
+			          	</tr>
+			          </table>
+		        </div>
+        	</div>
+    		</div>
+		</div>
+		</div>
+      </div>
+      <div class="clear"></div>                  
+      <div id="opciones">
+            <a class="button" onclick="validarForm('checkin-stp4')"><span>Continuar</span></a>
+            
+      </div>
+	</div>
+	</div>   
+	</div>
+

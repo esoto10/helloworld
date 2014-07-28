@@ -1,0 +1,57 @@
+<div class="grid_9">
+    <h1 class="reservas">Reservas</h1>
+    </div>
+    <!--RIGHT TEXT/CALENDAR-->
+    <div class="grid_6" id="eventbox"><a href="#canjearMillas" on click="mostrar('canjearMillas')"class="inline_calendar">Usted tiene XXX millas acumuladas</a>
+   	  <div class="hidden_calendar"></div>
+    </div>
+    
+    <!--  TITLE END  -->    
+    <!-- #PORTLETS START -->
+    <div id="portlets">
+    <!-- FIRST SORTABLE COLUMN START -->
+
+      <!--THIS IS A PORTLET-->
+      <div class="clear"></div>
+		<div class="portlet">
+		<div class="portlet-header fixed"><img src="images/comprar.png" width="16" height="16" alt="Comments" />Comprar Boleto</div>
+
+		<div class="portlet-content nopadding">
+		  <form id="comprar-boleto-form" name="comprar-boleto-form">
+          
+        <table  width="100%" cellpadding="0" cellspacing="0" id="box-table-a">
+            <thead>
+              <tr>
+                <th width="17%" scope="col">Fecha de Reserva</th>
+                    <th width="15%" scope="col">Salida</th>
+                    <th width="14%" scope="col">Llegada</th>
+                    <th width="13%" scope="col">Vuelo</th>
+                    <th width="13%" scope="col">Cabina</th>
+                    <th width="16%" scope="col">Total a Pagar</th>
+                    <th width="12%" scope="col">Selección</th>
+              </tr>
+            </thead>
+            <tbody  align="center"  id="reserva-list-tbody"></tbody>
+          </table>
+        </form>
+        <div align="center" class="message" id="show-message"></div>
+        <div class="clear"></div>
+        <table width="100%">
+        	<tr>
+            	<td>
+                	<a class="button" onclick="validarForm('comprar-boleto')"><span>Comprar</span></a>
+                </td>
+                <td valign="middle" align="right">
+                	<select id="tipoPago">
+                          <option value="none" selected="selected">[Seleccione]</option>
+                          <option value="tarjetaCredito">Tarjeta de Crédito</option>
+                          <option value="prescencial">Prescencial</option>
+            		</select>
+                </td>
+            </tr>
+        
+        </table>
+        	
+          	</div>
+		 
+      </div>    

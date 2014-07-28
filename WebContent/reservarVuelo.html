@@ -1,0 +1,96 @@
+<div class="grid_9">
+    <h1 class="reservas">Reservas</h1>
+    </div>
+    <!--RIGHT TEXT/CALENDAR-->
+    <div class="grid_6" id="eventbox"><a href="#" class="inline_calendar">Ud tiene X reservas pendientes! Sus millas acumuladas son XXX</a>
+   	  <div class="hidden_calendar"></div>
+    </div>
+    
+    <!--  TITLE END  -->    
+    <!-- #PORTLETS START -->
+    <div id="portlets">
+    <!-- FIRST SORTABLE COLUMN START -->
+
+      <!--THIS IS A PORTLET-->
+      <div class="clear"></div>
+		<div class="portlet">
+		<div class="portlet-header fixed"><img src="images/icons/airplane.png" width="16" height="16" alt="Comments" />Buscar Vuelo</div>
+
+		<div class="portlet-content nopadding">
+		  <form id="buscar-vuelo-form" name="buscar-vuelo-form">
+          <table width='100%' cellpadding="0" cellspacing="0">
+	      <tr>
+	        <td colspan="4">
+	              	<input type="radio" name="tipoBusqueda" value="0" checked="checked" onclick="checkFechaRegreso()"/>Ida - Vuelta
+            		<input type="radio" name="tipoBusqueda" value="1" onclick="checkFechaRegreso()"/>Sólo Ida
+            </td>
+	       </tr>
+	      <tr colspan="4">
+	        <td width="25%"><label>Ciudad de Salida</label></td>
+            <td width="25%"><label>Ciudad de Destino</label></td>
+            <td width="25%"><label>Fecha de Salida</label></td>
+            <td width="25%"><label id="labelFechaRegreso">Fecha Regreso</label></td>
+          </tr>
+          <tr colspan="4">
+	        <td width="25%"><input type="text" name="vuelo.origen" id="origen" class="smallInput" /></td>
+            <td width="25%"><input type="text" name="vuelo.destino" id="destino" class="smallInput" /></td>
+            <td width="25%"><input type="text" name="vuelo.fechaSalida" id="fechaSalida" class="smallInput" /></td>
+            <td width="25%"><input type="text" name="fechaRegreso" id="fechaRegreso" class="smallInput" /></td>
+	      </tr>
+	    </table>
+        </form>
+        <div align="center" class="message" id="show-message"></div> 
+        <div class="clear"></div>
+          <a class="button" onclick="validarForm('buscar-vuelo')"><span>Buscar</span></a>
+           <a class="button_grey" id="opciones" onclick="validarForm('confirmar-buscar-vuelo')"><span>Reservar</span></a>
+		</div>
+		
+        </div>    
+      <!--THIS IS A PORTLET-->
+        
+
+       <!-- FIRST SORTABLE COLUMN END -->
+    <div class="clear"></div>
+    <!--THIS IS A WIDE PORTLET-->
+    <div class="portlet" id="vuelos-ida">
+      <div class="portlet-header fixed" id="ruta-ida"></div>
+		<div class="portlet-content nopadding">
+		<form id="confirmar-buscar-vuelo-form" name="confirmar-buscar-vuelo-form">
+		<table  width="100%" cellpadding="0" cellspacing="0" id="box-table-a">
+		  <thead>
+		  <tr>
+		    <th width="102" scope="col"> <table  width="100%" cellpadding="0" cellspacing="0" id="box-table-a2">
+		      <thead>
+		        <tr>
+		          <th width="136" scope="col">Vuelo</th>
+		          <th width="102" scope="col">Salida</th>
+		          <th width="109" scope="col">Llegada</th>
+		          <th width="129" scope="col">Duración</th>
+		          <th width="90" scope="col">Elegir</th>
+	            </tr>
+	          </thead>
+		      <tbody align="center" id="vuelos-ida-list-tbody">
+	          </tbody>
+		      </table>
+              <div class="portlet" id="vuelos-vuelta">
+              <div class="portlet-header fixed" id="ruta-vuelta"></div>
+              <div class="portlet-content nopadding">
+              <table width="100%" cellpadding="0" cellspacing="0" id="box-table-a2">
+                <thead>
+                  <tr>
+                    <th width="136" scope="col">Vuelo</th>
+                    <th width="102" scope="col">Salida</th>
+                    <th width="109" scope="col">Llegada</th>
+                    <th width="129" scope="col">Duración</th>
+                    <th width="90" scope="col">Elegir</th>
+                  </tr>
+                </thead>
+                <tbody align="center" id="vuelos-vuelta-list-tbody">
+                </tbody>
+            </table></th>
+		  </tr>
+		  </thead>
+		</table>
+		</form>
+    </div>
+      </div>

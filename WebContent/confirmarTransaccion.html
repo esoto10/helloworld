@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>::Confirmación de Transacción::</title>
+<script src="js/jquery-1.6.js"></script>
+<script src="js/ajax.util.js"></script>
+<script src="js/util.js"></script>
+<script>
+	$(function(){
+		var tknPago = getURLParameter("tknPago");
+		var idReserva = getURLParameter("idReserva");
+		var tipoPago = getURLParameter("tipoPago")
+		confirmarCompraBoleto(tknPago,idReserva, tipoPago);
+	});
+</script>
+<style>
+.message{
+	font-family:Verdana, Geneva, sans-serif;
+	display:block;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	text-align:center;
+}
+#success {
+	background-image: url(../images/icons/action_check.gif);
+	color: green;
+}
+#fail {
+	background-image: url(../images/icons/exclamation.gif);
+	color: red;
+}
+</style>
+</head>
+<body>
+	<table align="center">
+		<tr>
+			<div class="message" align="center" id="show-message"></div>
+		</tr>
+		<tr>
+		<td align="left"><input type="button" value="Finalizar" onclick="self.close()"/></td>
+		</tr>
+	</table>
+</body>
+</html>
